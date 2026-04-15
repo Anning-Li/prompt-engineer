@@ -57,17 +57,15 @@ Each cell is run at 4 reflection depths: **R0** (direct), **R1** (checklist), **
 > Measures whether steering hurts or helps instruction-following ability and answer format quality, independent of safety behavior.
 
 - **Metric:** Length-Controlled Win Rate (LC-WR)
-- **Sample size:** 100–200 prompts (stratified across creative writing, coding, general knowledge, classification)
-- **Why LC-WR:** Controls for verbosity inflation caused by safety disclaimers; Spearman correlation of 0.98 with Chatbot Arena
+- **Sample size:** 50 prompts (stratified across creative writing, coding, general knowledge, classification)
 - **Link:** https://github.com/tatsu-lab/alpaca_eval
 
 ### 2. AdvisorQA — Helpfulness vs. Harmlessness
 
 > Measures whether safety steering causes the model to become less helpful on subjective, real-world advice questions, using orthogonal helpfulness and harmlessness axes.
 
-- **Metrics:** Helpfulness rank (1–5 against human references) + Harmlessness score (LifeTox moderator)
-- **Sample size:** 50–100 questions across relationships, career, health, finances
-- **Key property:** Helpfulness and harmlessness are designed to be orthogonal — tradeoffs are directly observable
+- **Metrics:** Helpfulness rank (1–5 against human references)
+- **Sample size:** 50 questions across relationships, career, health, finances
 - **Link:** https://github.com/minbeomkim/AdvisorQA
 
 ### 3. XSTest — Over-Refusal
@@ -75,5 +73,5 @@ Each cell is run at 4 reflection depths: **R0** (direct), **R1** (checklist), **
 > Measures over-refusal on prompts that are safe but superficially sensitive — a direct test of whether safety steering causes the model to refuse benign requests.
 
 - **Metrics:** Refusal Rate (safe prompts), Precision, Recall
-- **Sample size:** 250 safe prompts + 200 unsafe contrast prompts
+- **Sample size:** 56 safe prompts + 44 unsafe contrast prompts
 - **Link:** https://github.com/paul-rottger/xstest
